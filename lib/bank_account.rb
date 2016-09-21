@@ -18,7 +18,7 @@ class BankAccount
   end
 
   def statement
-    @array.join("\n")
+    @array.reverse.rotate(-1).join("\n")
   end
 
 end
