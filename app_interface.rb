@@ -25,7 +25,7 @@ while (number != 4)
   elsif number == 4
     puts "Thank you for banking with us"
   else
-    puts "Please enter a vlid number"
+    puts "Please enter a valid number"
   end
 
   puts "\n\n"

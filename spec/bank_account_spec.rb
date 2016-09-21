@@ -19,7 +19,7 @@ describe BankAccount do
 
   it "displays bank statement with date in reverse chronological order" do
     @date_now = "21/09/2016"
-    Time.stub_chain(:now, :strftime).and_return(@date_now)
+    allow(Time).to receive_message_chain(:now, :strftime).and_return(@date_now)
     subject.credit(500)
     subject.debit(200)
     expect(subject.statement).to eq "Date || Credit || Debit || Balance\n21/09/2016 || || 200 || 300\n21/09/2016 || 500 || || 500"
